@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petik 2 Jombang - Layanan Profesional</title>
+    <!-- Menggunakan Tailwind CSS untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi Font & Tema -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', /* Biru Laut Gelap / Navy */
+                        secondary: '#3b82f6', /* Biru Terang */
+                        accent: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Tambahan custom CSS untuk efek tertentu */
+        .hero-pattern {
+            background-color: #1e3a8a;
+            background-image: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-slate-50">
+
+    <!-- 1. Header (Logo & Navigasi) -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Placeholder Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- Ganti 'src' di bawah ini dengan URL logo asli Anda nantinya -->
+                    <img class="h-10 w-auto mr-3 hidden sm:block" src="https://placehold.co/100x40/1e3a8a/ffffff?text=Logo" alt="Logo Petik 2 Jombang">
+                    <span class="font-bold text-2xl text-primary tracking-tight">Petik 2 <span class="text-secondary">Jombang</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-gray-600 hover:text-primary font-medium transition duration-150">Beranda</a>
+                    <a href="#tentang-kami" class="text-gray-600 hover:text-primary font-medium transition duration-150">Tentang Kami</a>
+                    <a href="#layanan" class="text-gray-600 hover:text-primary font-medium transition duration-150">Layanan</a>
+                    <a href="#kontak" class="text-gray-600 hover:text-primary font-medium transition duration-150">Kontak</a>
+                </nav>
+
+                <!-- Tombol CTA Navigasi -->
+                <div class="hidden md:flex">
+                    <a href="#kontak" class="bg-primary hover:bg-blue-800 text-white px-6 py-2 rounded-full font-medium transition duration-200 shadow-md">
+                        Hubungi Kami
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Tersembunyi secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 text-center">
+                <a href="#beranda" class="block px-3 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-md font-medium">Beranda</a>
+                <a href="#tentang-kami" class="block px-3 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-md font-medium">Tentang Kami</a>
+                <a href="#layanan" class="block px-3 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-md font-medium">Layanan</a>
+                <a href="#kontak" class="block px-3 py-3 text-gray-700 hover:bg-blue-50 hover:text-primary rounded-md font-medium">Kontak</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="beranda" class="hero-pattern min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 md:pr-12 text-white">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-800/50 text-blue-200 text-sm font-semibold mb-4 border border-blue-500/30">
+                    Profesional & Terpercaya
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    Solusi Terbaik Untuk Bisnis Anda di <span class="text-secondary">Jombang</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
+                    Petik 2 Jombang hadir untuk memberikan layanan berkualitas tinggi, dirancang khusus untuk memenuhi kebutuhan profesional Anda dengan standar terbaik.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#layanan" class="bg-secondary hover:bg-blue-500 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-200 shadow-lg text-center">
+                        Lihat Layanan
+                    </a>
+                    <a href="#tentang-kami" class="bg-transparent border-2 border-white/70 hover:bg-white/10 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-200 text-center">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+            <!-- Ilustrasi / Gambar Pendukung di Hero -->
+            <div class="w-full md:w-1/2 mt-12 md:mt-0 hidden md:block">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tim Petik 2 Jombang" class="rounded-2xl shadow-2xl border-4 border-white/10 object-cover h-[450px] w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About Us (Tentang Kami) -->
+    <section id="tentang-kami" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tentang Petik 2 Jombang" class="rounded-2xl shadow-xl z-10 relative">
+                        <div class="absolute -bottom-6 -right-6 w-full h-full border-4 border-primary rounded-2xl z-0 hidden sm:block"></div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Tentang Kami</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Dedikasi Untuk Kualitas & Pelayanan Terbaik</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Berawal dari komitmen untuk memajukan potensi daerah, <strong>Petik 2 Jombang</strong> didirikan sebagai mitra strategis yang mengedepankan profesionalitas. Kami percaya bahwa setiap masalah memiliki solusi inovatif jika ditangani oleh tim yang tepat.
+                    </p>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        Dengan pengalaman bertahun-tahun, kami melayani berbagai sektor dengan pendekatan yang personal, berorientasi pada hasil, dan integritas yang tinggi. Kesuksesan klien adalah pencapaian terbesar kami.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 border-t border-gray-100 pt-8">
+                        <div>
+                            <div class="text-4xl font-bold text-primary mb-2">99%</div>
+                            <div class="text-gray-500 font-medium">Klien Puas</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-primary mb-2">5+</div>
+                            <div class="text-gray-500 font-medium">Tahun Pengalaman</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Services (Layanan Kami) -->
+    <section id="layanan" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold text-secondary tracking-widest uppercase mb-2">Layanan Kami</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Solusi Profesional Untuk Anda</h3>
+                <p class="text-gray-600 text-lg">
+                    Kami menyediakan berbagai layanan komprehensif yang dirancang untuk mendukung pertumbuhan dan efisiensi bisnis maupun kebutuhan personal Anda.
+                </p>
+            </div>
+
+            <!-- Grid Layanan -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 service-card transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-primary">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Konsultasi Bisnis</h4>
+                    <p class="text-gray-600 leading-relaxed mb-4">Membantu Anda merumuskan strategi bisnis yang tepat sasaran, mengidentifikasi peluang, dan meminimalisir risiko untuk pasar di Jombang.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 service-card transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-primary">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Optimalisasi Kinerja</h4>
+                    <p class="text-gray-600 leading-relaxed mb-4">Pendekatan taktis untuk meningkatkan efisiensi operasional dan hasil yang terukur bagi perusahaan maupun organisasi Anda.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 service-card transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-primary">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Layanan Kemitraan</h4>
+                    <p class="text-gray-600 leading-relaxed mb-4">Membangun ekosistem kerja sama yang saling menguntungkan dengan berbagai pihak untuk memperluas jangkauan dan dampak positif.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer (Kontak dan Copyright) -->
+    <footer id="kontak" class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <!-- Tentang Footer -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center mb-6">
+                        <span class="font-bold text-2xl tracking-tight text-white">Petik 2 <span class="text-secondary">Jombang</span></span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Menghadirkan solusi profesional dan layanan berkualitas tinggi untuk masyarakat dan pebisnis di wilayah Jombang dan sekitarnya.
+                    </p>
+                </div>
+
+                <!-- Tautan Cepat -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Tautan Cepat</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#beranda" class="text-gray-400 hover:text-secondary transition duration-150 flex items-center"><span class="mr-2">›</span> Beranda</a></li>
+                        <li><a href="#tentang-kami" class="text-gray-400 hover:text-secondary transition duration-150 flex items-center"><span class="mr-2">›</span> Tentang Kami</a></li>
+                        <li><a href="#layanan" class="text-gray-400 hover:text-secondary transition duration-150 flex items-center"><span class="mr-2">›</span> Layanan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kontak -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white uppercase tracking-wider">Hubungi Kami</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>Jl. Raya Jombang No. 123,<br>Kabupaten Jombang, Jawa Timur</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-3 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-3 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>info@petik2jombang.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2026 Petik 2 Jombang. Seluruh hak cipta dilindungi.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition">Syarat & Ketentuan</a>
+                    <a href="#" class="hover:text-white transition">Kebijakan Privasi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Interaktif Ringan -->
+    <script>
+        // Logika untuk Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Menutup menu mobile ketika salah satu tautan diklik
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
