@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petik 2 Jombang | Profesional & Inovatif</title>
+    <style>
+        /* CSS Reset & Variabel Warna */
+        :root {
+            --primary-color: #1e3a8a; /* Biru Navy */
+            --secondary-color: #f59e0b; /* Amber/Emas */
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigasi (Header) */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #3b82f6 100%);
+            color: var(--white);
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #d97706;
+            transform: translateY(-2px);
+        }
+
+        /* Section Global */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        /* Tentang Kami */
+        .about-content {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            background-color: #e5e7eb;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+        }
+
+        /* Program / Layanan */
+        .programs {
+            background-color: var(--white);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Disembunyikan di HP untuk simplifikasi, bisa ditambah menu hamburger nanti */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigasi -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Petik 2 <span>Jombang</span></a>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section (Bagian Utama) -->
+    <section id="beranda" class="hero">
+        <h1>Selamat Datang di Petik 2 Jombang</h1>
+        <p>Mencetak generasi unggul, profesional, dan siap menghadapi tantangan era digital dengan kompetensi terbaik.</p>
+        <a href="#program" class="btn">Lihat Program Kami</a>
+    </section>
+
+    <!-- Section Tentang Kami -->
+    <section id="tentang">
+        <h2 class="section-title">Tentang Kami</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Visi & Misi</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-light);">Petik 2 Jombang berdedikasi untuk memberikan pendidikan dan pelatihan terbaik di bidang teknologi dan keahlian terapan. Kami berkomitmen untuk memfasilitasi pembelajaran yang interaktif dan relevan dengan kebutuhan industri masa kini.</p>
+                <p style="color: var(--text-light);">Didukung oleh tenaga pengajar profesional dan fasilitas memadai, kami siap menjadi jembatan kesuksesan untuk masa depan Anda.</p>
+            </div>
+            <div class="about-image">
+                [ Area Foto Gedung / Kegiatan ]
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Program -->
+    <div style="background-color: var(--white);">
+        <section id="program" class="programs">
+            <h2 class="section-title">Program Keunggulan</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Teknologi Informasi</h3>
+                    <p>Pembelajaran intensif mengenai rekayasa perangkat lunak, jaringan komputer, dan sistem digital terkini.</p>
+                </div>
+                <div class="card">
+                    <h3>Keahlian Vokasi</h3>
+                    <p>Pelatihan keterampilan praktis yang langsung dapat diaplikasikan di dunia kerja maupun kewirausahaan.</p>
+                </div>
+                <div class="card">
+                    <h3>Pengembangan Karakter</h3>
+                    <p>Fokus pada etos kerja, kepemimpinan, dan nilai-nilai moral untuk mencetak tenaga kerja profesional yang berintegritas.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <p>&copy; 2026 Petik 2 Jombang. Hak Cipta Dilindungi.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Jl. Contoh Alamat No. 123, Jombang, Jawa Timur | Telp: (0321) 123456</p>
+    </footer>
+
+</body>
+</html>
